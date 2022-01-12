@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
   def new
-    @item =Item.new
+    @item = Item.new
   end
 
   def index
@@ -11,10 +11,10 @@ class ItemsController < ApplicationController
     @item = Item.new(item_params)
     @item.save
     redirect_to items_path
-
   end
 
   private
+
   def item_params
     params.require(:item).permit(:image)
   end
