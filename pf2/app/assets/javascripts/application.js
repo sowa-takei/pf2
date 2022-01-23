@@ -18,6 +18,14 @@
 //= require turbolinks
 //= require_tree .
 
+$(document).ready(function(){
+  $('.test').on('click', function(){
+    $(this).css('color','red');
+  });
+});
+
+
+
 $(document).ready(function () {
   $("#images").skippr({
     // スライドショーの変化 ("fade" or "slide")
