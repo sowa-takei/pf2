@@ -29,11 +29,23 @@ $(document).ready(function(){
 
 
 $(function(){
-  $('.box1').mouseover(function(){
-    $('.box1').addClass('box-ext');
+  $('.box1').on('click',function(){
+    $(this).slideUp();
   });
-  $('.box1').mouseout(function(){
-    $('.box1').removeClass('box-ext');
+});
+
+$(function(){
+  $('button').on('click',function(){
+    $('ul').children().css('color','red');
+  });
+});
+
+$(function(){
+  $('#back a').on('click',function(event){
+    $('body, html').animate({
+      scrollTop:0
+    },800);
+    event.preventDefault();
   });
 });
 
